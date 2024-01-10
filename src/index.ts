@@ -13,7 +13,7 @@ app.get('/', (c) => {
 });
 
 app.route('/service/templates', templateServiceRoutes);
-app.route('/service/contacts',contactsServiceRoutes)
+app.route('/contacts',contactsServiceRoutes)
 
 const port = 3000;
 console.log(`Server is running on port ${port}`);

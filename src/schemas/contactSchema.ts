@@ -9,16 +9,16 @@ export const contactGroups = pgTable('contactGroups', {
 
 export const contacts = pgTable('contacts', {
     id: serial('id').primaryKey(),
-    name: varchar('name').references(() => contactGroups.id),
+    name: varchar('name'),
     phone: varchar('phone'),
     gender: varchar('gender'),
     dob: date('dob'),
     marriage_anniversary_day: date('marriage_anniversary_day'),
-    group_id: serial('group_id'),
+    group_id: serial('group_id').references(() => contactGroups.id),
     status:varchar('status'),
     createdAt: timestamp('created_at').defaultNow().notNull(),
     updatedAt: timestamp('updated_at').defaultNow().notNull()
-},  (table) => {
+}, (table) => {
   return {
     groupIdx: index("group_idx").on(table.group_id)
   };
