@@ -1,0 +1,18 @@
+@baseUrl = http://localhost:3000
+
+### Base Url
+GET {{baseUrl}}
+
+### Create Template
+POST {{baseUrl}}/service/templates/create-template
+Content-Type: application/json
+Accept: application/json
+
+< ./payloads/createTemplate.json
+
+### Get Templates
+GET {{baseUrl}}/service/templates/list
+
+### Delete Template
+DELETE {{baseUrl}}/service/templates/delete?template_name=welcome_template
+

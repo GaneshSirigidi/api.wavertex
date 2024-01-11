@@ -4,9 +4,11 @@
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "types": ["reflect-metadata"],
-    "target": "es5",
+    "target": "es6",
     "lib": ["es6", "dom"],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports":true
   }
 }

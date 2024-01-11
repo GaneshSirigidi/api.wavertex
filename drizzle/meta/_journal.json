@@ -1,0 +1,48 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1704880490157,
+      "tag": "0000_perpetual_vance_astro",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1704883316367,
+      "tag": "0001_complete_hercules",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1704886255690,
+      "tag": "0002_famous_synch",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1704887604401,
+      "tag": "0003_classy_captain_stacy",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1704939327912,
+      "tag": "0004_stormy_speed_demon",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1704939349718,
+      "tag": "0005_mean_captain_flint",
+      "breakpoints": true
+    }
+  ]
+}
