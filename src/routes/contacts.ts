@@ -8,7 +8,8 @@ const contactsServiceRoutes = new Hono();
 const contactsController = container.get<ContactsController>(TYPES.ContactsController);
 
 contactsServiceRoutes.post('/add-contact', contactsController.addContact);
-contactsServiceRoutes.post('/add-contact/group',contactsController.addContactGroup)
+contactsServiceRoutes.post('/add-contact/group', contactsController.addContactGroup)
+contactsServiceRoutes.get('/list',contactsController.listContacts)
 
 
 export default contactsServiceRoutes;

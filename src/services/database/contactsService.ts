@@ -14,11 +14,18 @@ class ContactsService {
     }
 
     async createContactGroup(data:any) {
-        const addContactData = await dbClient
+        const contactGroupData = await dbClient
             .insert(contactGroups)
             .values(data)
             .returning();
-        return addContactData;
+        return contactGroupData;
+    }
+
+    async listContacts(){
+        const contactsData = await dbClient
+            .select()
+            .from(contacts)
+        return contactsData;
     }
 }
 

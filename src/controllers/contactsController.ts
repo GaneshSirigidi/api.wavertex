@@ -40,6 +40,17 @@ class ContactsController extends BaseController {
       return this.sendErrorResponse(c, error.status || 500, error);
     }
   }
+
+  listContacts = async (c: Context) => {
+    try {
+      const data= await this.contactsService.listContacts()
+
+      return this.sendSuccessResponse(c, 201,data, 'Contact added successfully')
+    } catch (error: any) {
+      console.log(error)
+      return this.sendErrorResponse(c, error.status || 500, error);
+    }
+  }
   
 }
 
