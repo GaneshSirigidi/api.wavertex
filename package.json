@@ -1,7 +1,6 @@
 {
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "rimraf ./dist && tsc",
     "mig:gen": "drizzle-kit generate:pg",
     "mig:pull": "drizzle-kit introspect:pg",
     "mig:push": "drizzle-kit push:pg"
