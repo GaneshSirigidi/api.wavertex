@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
 import { contactGroups, contacts } from "../../schemas/contactSchema";
-import { dbClient } from "../../db/migrate";
+import { dbClient } from "../../db/client";
 
 @injectable()
 class ContactsService {

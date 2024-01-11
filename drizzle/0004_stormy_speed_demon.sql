@@ -1,0 +1,1 @@
+ALTER TABLE "contactGroups" DROP COLUMN IF EXISTS "name";

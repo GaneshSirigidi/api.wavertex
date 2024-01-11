@@ -1,0 +1,1 @@
+ALTER TABLE "contactGroups" ADD COLUMN "name" varchar;

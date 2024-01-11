@@ -1,9 +1,9 @@
 {
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "migration:generate": "drizzle-kit generate:pg",
-    "migration:push":"drizzle-kit push:pg",
-    "migration:intro":"drizzle-kit introspect:pg"
+    "mig:gen": "drizzle-kit generate:pg",
+    "mig:pull":"drizzle-kit introspect:pg",
+    "mig:push":"drizzle-kit push:pg"
   },
   "dependencies": {
     "@hono/node-server": "^1.3.5",

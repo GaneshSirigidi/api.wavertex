@@ -1,4 +1,4 @@
-import { pgTable, serial, varchar, timestamp, date } from "drizzle-orm/pg-core"
+import { pgTable, serial, varchar, timestamp, index, foreignKey, date } from "drizzle-orm/pg-core"
   import { sql } from "drizzle-orm"
 
 
@@ -20,4 +20,10 @@ export const contacts = pgTable("contacts", {
 	status: varchar("status"),
 	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow().notNull(),
 	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow().notNull(),
+	groupId: serial("group_id").notNull().references(() => contactGroups.id),
+},
+(table) => {
+	return {
+		groupIdx: index("group_idx").on(table.groupId),
+	}
 });

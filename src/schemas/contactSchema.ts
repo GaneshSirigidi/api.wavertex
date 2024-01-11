@@ -14,7 +14,7 @@ export const contacts = pgTable('contacts', {
     gender: varchar('gender'),
     dob: date('dob'),
     marriage_anniversary_day: date('marriage_anniversary_day'),
-    group_id: serial('group_id').references(() => contactGroups.id),
+    group_id: serial('group_id').references(() => contactGroups.id).notNull(),
     status:varchar('status'),
     createdAt: timestamp('created_at').defaultNow().notNull(),
     updatedAt: timestamp('updated_at').defaultNow().notNull()
